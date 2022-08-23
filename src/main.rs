@@ -1,7 +1,7 @@
 use yew::prelude::*;
 extern crate chrono;
 extern crate chrono_tz;
-use chrono::{TimeZone, Utc, DateTime, Local};
+use chrono::{TimeZone, DateTime};
 use chrono_tz::US::Eastern;
 use chrono_tz::Tz;
 
@@ -10,7 +10,6 @@ struct Social{
     url: String,
 }
 struct Person {
-    id: usize,
     name: String,
     time: DateTime<Tz>,
     socials: Vec<Social>,
@@ -20,49 +19,41 @@ struct Person {
 fn app() -> Html {
     let videos = vec![
         Person {
-            id: 0,
             name: "DJ Drekt".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(00, 00, 0),
             socials: vec! []
         },
         Person {
-            id: 0,
             name: "Xyzzyx".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(00, 45, 0),
             socials: vec! []
         },
         Person {
-            id: 0,
             name: "Rubiks".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(01, 30, 0),
             socials: vec! []
         },
         Person {
-            id: 0,
             name: "Ayabunnie".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(02, 15, 0),
             socials: vec! []
         },
         Person {
-            id: 0,
             name: "Devixel".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(03, 00, 0),
             socials: vec! []
         },
         Person {
-            id: 0,
             name: "Dreamzzz".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(03, 45, 0),
             socials: vec! []
         },
         Person {
-            id: 0,
             name: "Aaldrik".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(4, 30, 0),
             socials: vec! []
         },
         Person {
-            id: 0,
             name: "Divinity".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(5, 15, 0),
             socials: vec! []
