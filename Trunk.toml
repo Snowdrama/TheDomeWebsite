@@ -1,6 +1,6 @@
 [build]
 target = "index.html"
 release = true
-dist = "docs"
-public_url = "./"
+dist = "dist"
+public_url = "/"
 filehash = true
