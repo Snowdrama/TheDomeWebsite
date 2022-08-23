@@ -34,16 +34,47 @@ html {
 }
 
 .teaser-grid {
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 50% 50%;
     text-align: center;
     align-items: center;
     align-content: center;
     justify-content: space-around;
     justify-items: center;
+}
+.teaser-left{
+    grid-column: 1;
+    grid-row: 2;
+}
+.teaser-center{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+}
+.teaser-right{
+    grid-column: 2;
+    grid-row: 2;
+}
+@media screen and (min-width: 600px) {
+    .teaser-grid{
+        grid-template-columns: 20% 60% 20%;
+        width: 80%;
+    }
+    .teaser-left{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .teaser-center{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .teaser-right{
+        grid-column: 1;
+        grid-row: 1;
+    }
 }
 
 .teaser-grid * {

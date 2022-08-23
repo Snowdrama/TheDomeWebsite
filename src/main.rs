@@ -146,11 +146,11 @@ impl Component for App {
                 </h1>
                 <hr/>
                 <div class="teaser-grid">
-                    <img width="24%" src="images/lp_logo.png" />
-                    <video width="50%" controls=true autoplay=false>
+                    <img class="teaser-left" width="24%" src="images/lp_logo.png" />
+                    <video class="teaser-center" width="50%" controls=true autoplay=false>
                         <source src="videos/thedometeaser.mov" type="video/mp4" />
                     </video>
-                    <img width="24%" src="images/in_logo.png" />
+                    <img  class="teaser-right" width="24%" src="images/in_logo.png" />
                 </div>
                 <hr/>
                 <div class="set-times-container">
