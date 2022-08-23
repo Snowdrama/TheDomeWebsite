@@ -13,7 +13,7 @@ struct Social{
 }
 struct Person {
     id: usize,
-    speaker: String,
+    name: String,
     time: DateTime<Tz>,
     socials: Vec<Social>,
 }
@@ -23,49 +23,49 @@ fn app() -> Html {
     let videos = vec![
         Person {
             id: 0,
-            speaker: "DJ Drekt".to_string(),
+            name: "DJ Drekt".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(00, 00, 0),
             socials: vec! []
         },
         Person {
             id: 0,
-            speaker: "Xyzzyx".to_string(),
+            name: "Xyzzyx".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(00, 45, 0),
             socials: vec! []
         },
         Person {
             id: 0,
-            speaker: "Rubiks".to_string(),
+            name: "Rubiks".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(01, 30, 0),
             socials: vec! []
         },
         Person {
             id: 0,
-            speaker: "Ayabunnie".to_string(),
+            name: "Ayabunnie".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(02, 15, 0),
             socials: vec! []
         },
         Person {
             id: 0,
-            speaker: "Devixel".to_string(),
+            name: "Devixel".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(03, 00, 0),
             socials: vec! []
         },
         Person {
             id: 0,
-            speaker: "Dreamzzz".to_string(),
+            name: "Dreamzzz".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(03, 45, 0),
             socials: vec! []
         },
         Person {
             id: 0,
-            speaker: "Aaldrik".to_string(),
+            name: "Aaldrik".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(4, 30, 0),
             socials: vec! []
         },
         Person {
             id: 0,
-            speaker: "Divinity".to_string(),
+            name: "Divinity".to_string(),
             time: Eastern.ymd(2022, 8, 27).and_hms(5, 15, 0),
             socials: vec! []
         },
@@ -81,7 +81,7 @@ fn app() -> Html {
         }).collect::<Html>();
         html! {
             <div>
-                <div>{format!("{} - {}", video.speaker, video.time.naive_local().format("%a %b %e %H:%M"))}</div>
+                <div>{format!("{} - {}", video.name, video.time.naive_local().format("%a %b %e %H:%M"))}</div>
                 <div>{ socials }</div>
             </div>
         }
