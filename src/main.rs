@@ -1,10 +1,8 @@
-
 use yew::prelude::*;
 extern crate chrono;
 extern crate chrono_tz;
 use chrono::{TimeZone, Utc, DateTime, Local};
 use chrono_tz::US::Eastern;
-use chrono_tz::Asia::Kolkata;
 use chrono_tz::Tz;
 
 struct Social{
@@ -87,11 +85,43 @@ fn app() -> Html {
         }
     }).collect::<Html>();
 
+    let logo = html!(
+        <>
+            <img src="images/poster.jpg" />
+        </>);
+
     html! {
         <>
-            <h1>{ "The Dome" }</h1>
-            <div>
-                { videos }
+            <h1 class="teaser-flex dome-title">
+                <div>{ "The" }</div>
+                <img class="dome-logo" src="images/thedomelogo.png" />
+                <div>{ "Dome" }</div>
+            </h1>
+            <hr/>
+            <div class="teaser-flex">
+                <img width="24%" src="images/lp_logo.png" />
+                <video width="50%" controls=true autoplay=false>
+                    <source src="videos/thedometeaser.mov" type="video/mp4" />
+                </video>
+                <img width="24%" src="images/in_logo.png" />
+            </div>
+            <hr/>
+            <div class="set-times-container">
+                <div class="set-times">
+                    <h1>
+                        { "08/26 - LP x IN" }
+                    </h1>
+                    <div>
+                        { "[ Times ]" }
+                    </div>
+                    <div>
+                        { videos }
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="poster-container">
+            <img class="poster" src="images/Poster.jpg" />
             </div>
         </>
     }
