@@ -83,13 +83,13 @@ fn app() -> Html {
 
     html! {
         <>
-            <h1 class="teaser-flex dome-title">
+            <h1 class="title-grid dome-title">
                 <div>{ "The" }</div>
                 <img class="dome-logo" src="images/thedomelogo.png" />
                 <div>{ "Dome" }</div>
             </h1>
             <hr/>
-            <div class="teaser-flex">
+            <div class="teaser-grid">
                 <img width="24%" src="images/lp_logo.png" />
                 <video width="50%" controls=true autoplay=false>
                     <source src="videos/thedometeaser.mov" type="video/mp4" />

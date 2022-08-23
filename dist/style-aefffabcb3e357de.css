@@ -7,11 +7,6 @@ html {
     color: #FFF
 }
 
-.dome-title {
-    font-size: 8vw;
-    font: 900px;
-}
-
 .teaser-flex {
     display: flex;
     flex-wrap: nowrap;
@@ -19,6 +14,46 @@ html {
     justify-content: space-around;
     align-items: center;
 }
+
+.title-grid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.title-grid * {
+    width: 100%;
+    font-size: 10vw;
+}
+
+.teaser-grid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.teaser-grid * {
+    width: 100%;
+    font-size: 10vw;
+}
+
+.title-grid-cell {
+}
+
 
 .teaser-flex * {
     text-align: center;
