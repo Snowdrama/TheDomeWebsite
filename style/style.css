@@ -16,7 +16,7 @@ html {
 }
 
 .title-grid {
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -34,7 +34,7 @@ html {
 }
 
 .teaser-grid {
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
