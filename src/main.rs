@@ -141,6 +141,9 @@ impl Component for App {
                     <img class="dome-logo" src="images/thedomelogo.png" />
                     <div>{ "Dome" }</div>
                 </h1>
+                <h1 class="date-time">
+                    { &self.time  }
+                </h1>
                 <hr/>
                 <div class="teaser-grid">
                     <img width="24%" src="images/lp_logo.png" />
@@ -152,9 +155,6 @@ impl Component for App {
                 <hr/>
                 <div class="set-times-container">
                     <div class="set-times">
-                        <h1>
-                            { &self.time  }
-                        </h1>
                         <h1>
                             { "08/26 - LP x IN" }
                         </h1>
