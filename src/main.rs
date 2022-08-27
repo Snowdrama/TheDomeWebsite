@@ -26,6 +26,7 @@ struct Person {
 
 impl App {
     fn update_countdown(&mut self){
+        return self.time = "Party's Over! Thanks for coming!".to_string();
         self.now = Utc::now();
         let diff = self.target.signed_duration_since(self.now);
         if diff.num_seconds() > 0 {
@@ -37,7 +38,6 @@ impl App {
         
         }
         else if diff.num_seconds() < -86400 {
-            self.time = "Party's Over!".to_string();
         }
         else{
             self.time = "Party Time!".to_string();
