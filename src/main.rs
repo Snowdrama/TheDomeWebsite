@@ -7,7 +7,6 @@ struct App {
 
 }
 
-
 #[derive(Clone, Routable, PartialEq)]
 enum Route {
     #[at("/")]
@@ -18,6 +17,7 @@ enum Route {
     #[at("/404")]
     NotFound,
 }
+
 impl App{
     fn switch(routes: &Route) -> Html {
         match routes {
