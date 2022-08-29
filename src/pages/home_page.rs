@@ -5,7 +5,7 @@ use chrono_tz::{US::Eastern, Tz};
 use gloo_timers::callback::{Interval};
 
 use crate::navigation::NavigationMenu;
-use crate::common::Header;
+use crate::common::{Header, Countdown};
 
 pub struct HomePage {
     time: String,
@@ -15,15 +15,6 @@ pub struct HomePage {
 }
 pub enum Msg {
     UpdateTime,
-}
-pub struct Social{
-    label: String,
-    url: String,
-}
-pub struct Person {
-    name: String,
-    time: DateTime<Tz>,
-    socials: Vec<Social>,
 }
 
 impl HomePage {
@@ -45,7 +36,6 @@ impl HomePage {
             self.time = "Party Time!".to_string();
         }
     }
-
 }
 
 impl Component for HomePage{
@@ -77,71 +67,13 @@ impl Component for HomePage{
     }
 
     fn view(&self, _ctx: &Context<Self>) -> Html {
-        let djtimes = vec![
-            Person {
-                name: "DJ Drekt".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(00, 00, 0),
-                socials: vec! []
-            },
-            Person {
-                name: "Xyzzyx".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(00, 45, 0),
-                socials: vec! []
-            },
-            Person {
-                name: "Rubiks".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(01, 30, 0),
-                socials: vec! []
-            },
-            Person {
-                name: "Ayabunnie".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(02, 15, 0),
-                socials: vec! []
-            },
-            Person {
-                name: "Devixel".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(03, 00, 0),
-                socials: vec! []
-            },
-            Person {
-                name: "Dreamzzz".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(03, 45, 0),
-                socials: vec! []
-            },
-            Person {
-                name: "Aaldrik".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(4, 30, 0),
-                socials: vec! []
-            },
-            Person {
-                name: "Divinity".to_string(),
-                time: Eastern.ymd(2022, 8, 27).and_hms(5, 15, 0),
-                socials: vec! []
-            },
-        ];
-    
-        let djtimes = djtimes.iter().map(|video| {
-            let socials = video.socials.iter().map(|social| {
-                html! {
-                    <div>
-                        <a href={format!("{}", social.url)}>{format!("{}", social.label)}</a>
-                    </div>
-                }
-            }).collect::<Html>();
-            html! {
-                <div>
-                    <div>{format!("{} - {}", video.name, video.time.naive_local().format("%a %b %e %H:%M"))}</div>
-                    <div>{ socials }</div>
-                </div>
-            }
-        }).collect::<Html>();
-    
         html!(
             <>
                 <Header/>
                 <NavigationMenu/>
                 <div style="text-align:center;">
-                    <h1>{"Coming Soon!"}</h1>
+                    <h1>{"More Info Coming Soon!"}</h1>
+                    <div>{"We want to have many more events at the Dome, right now nothing is planned so go check out the Gallery or the Past Events in the mean time!"}</div>
                 </div>
             </>)
     }
