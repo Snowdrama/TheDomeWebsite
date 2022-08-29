@@ -1,7 +1,20 @@
-
-routes:
+domains:
+- domain: thedome.party
+  type: PRIMARY
+  zone: thedome.party
+name: the-dome-website
+region: nyc
+static_sites:
+- environment_slug: html
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: Snowdrama/TheDomeWebsite
+  name: thedomewebsite-dist
+  routes:
   - path: /
-  - path: /gallery
   - path: /contact
   - path: /credits
   - path: /past
+  - path: /gallery
+  source_dir: dist

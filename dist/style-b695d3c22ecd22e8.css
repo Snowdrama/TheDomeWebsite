@@ -265,3 +265,8 @@ hr {
     width: 100%;
     object-fit: contain;
 }
+.youtube-embed{
+    width:100%;
+    min-height: 250px;
+    object-fit: contain;
+}

@@ -140,30 +140,8 @@ impl Component for HomePage{
             <>
                 <Header/>
                 <NavigationMenu/>
-                <div class="teaser-grid">
-                    <img class="teaser-left" width="24%" src="images/lp_logo.png" />
-                    <video class="teaser-center" width="50%" controls=true autoplay=false>
-                        <source src="videos/thedometeaser.mov" type="video/mp4" />
-                    </video>
-                    <img  class="teaser-right" width="24%" src="images/in_logo.png" />
-                </div>
-                <hr/>
-                <div class="set-times-container">
-                    <div class="set-times">
-                        <h1>
-                            { "08/26 - LP x IN" }
-                        </h1>
-                        <div>
-                            { "[ Times ]" }
-                        </div>
-                        <div>
-                            { djtimes }
-                        </div>
-                    </div>
-                </div>
-                <hr/>
-                <div class="poster-container">
-                <img class="poster" src="images/Poster.jpg" />
+                <div style="text-align:center;">
+                    <h1>{"Coming Soon!"}</h1>
                 </div>
             </>)
     }

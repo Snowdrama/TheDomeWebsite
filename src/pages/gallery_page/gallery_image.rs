@@ -41,7 +41,6 @@ impl Component for GalleryImage {
             },
         }
     }
-
     
     fn view(&self, ctx: &Context<Self>) -> Html {
         let open_callback = ctx.link().callback(|_| {
