@@ -1,0 +1,7 @@
+
+routes:
+  - path: /
+  - path: /gallery
+  - path: /contact
+  - path: /credits
+  - path: /past
