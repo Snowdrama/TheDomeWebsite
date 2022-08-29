@@ -27,12 +27,12 @@ impl Component for ContactPage {
                 <NavigationMenu/>
                 <div class="contact-grid">
                     <div class="contact-cell">
-                        <img src="images/contact_assets/snowdrama_HalfSize.png"/>
+                        <img src="/images/contact_assets/snowdrama_HalfSize.png"/>
                         <h1>{"Snowdrama"}</h1>
                         <a href="https://twitter.com/_snowdrama">{"Twitter"}</a>
                     </div>
                     <div class="contact-cell">
-                        <img src="images/contact_assets/rubiks_HalfSize.png"/>
+                        <img src="/images/contact_assets/rubiks_HalfSize.png"/>
                         <h1>{"Rubiks"}</h1>
                         <p><a href="https://twitter.com/rubiksdood">{"Twitter"}</a></p>
                         <p><a href="https://rubiksartworks.carrd.co/">{"Carrd"}</a></p>
