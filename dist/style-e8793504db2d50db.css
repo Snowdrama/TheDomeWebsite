@@ -1,0 +1,267 @@
+html {
+    background-color: #000;
+}
+
+* {
+    font-family: 'Major Mono Display', monospace;
+    color: #FFF;
+}
+
+.teaser-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title-grid {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.title-grid * {
+    width: 100%;
+    font-size: 10vw;
+}
+
+.teaser-grid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+.teaser-left{
+    grid-column: 1;
+    grid-row: 2;
+}
+.teaser-center{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+}
+.teaser-right{
+    grid-column: 2;
+    grid-row: 2;
+}
+@media screen and (min-width: 600px) {
+    .teaser-grid{
+        grid-template-columns: 20% 60% 20%;
+        width: 80%;
+    }
+    .teaser-left{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .teaser-center{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .teaser-right{
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+.teaser-grid * {
+    width: 100%;
+    font-size: 10vw;
+}
+
+.teaser-flex * {
+    text-align: center;
+    width: 30%;
+}
+
+.poster-container{
+    width:100%;
+    text-align: center;
+}
+
+.poster{
+    width:100%;
+}
+
+@media screen and (min-width: 600px) {
+    .poster{
+        width:50%;
+    }
+}
+
+.set-times-container {
+    width: 100%;
+    display:inline-block;
+}
+
+.set-times {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 600px) {
+    .set-times {
+        width: 50%;
+    }
+}
+
+hr {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.date-time{
+    text-align: center;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    column-gap: 1%;
+    row-gap: 1%;
+    align-items: center;
+    justify-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .gallery-grid{
+        grid-template-columns: 50% 50%;
+    }
+}
+@media screen and (min-width: 800px) {
+    .gallery-grid{
+        grid-template-columns: 32% 32% 32%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .gallery-grid{
+        grid-template-columns: 24% 24% 24% 24%;
+    }
+}
+
+.gallery-grid img {
+    max-width: 100%;
+    max-height: 20vh;
+}
+
+.modal-image{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal{
+    background-color: #000000EE;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    animation: fadein 1s;
+    display:none;
+}
+
+.modal.show{
+    display: block;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+
+.modal img{
+    margin: 5%;
+    min-width: 90%;
+    min-height:  90%;
+    max-width: 90%;
+    max-height:  90%;
+    object-fit: contain;
+}
+
+.modal-close{
+    position: fixed;
+    top: 0px;
+    right:0px;
+    font-size: 100px;
+}
+
+
+.event-grid{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: auto;
+    column-gap: 1%;
+    row-gap: 1%;
+    align-items: center;
+    justify-items: center;
+}
+@media screen and (min-width: 800px) {
+    .event-grid{
+        grid-template-columns: 32% 32% 32%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .event-grid{
+        grid-template-columns: 24% 24% 24% 24%;
+    }
+}
+
+.event-cell{
+    background-color: #666;
+    padding:10px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.event-cell h1{
+    text-align: center;
+}
+
+.event-cell img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    column-gap: 1%;
+}
+
+@media screen and (min-width: 800px) {
+    .contact-grid{
+        grid-template-columns: 49% 49%;
+    }
+}
+.contact-cell{
+    text-align: center;
+}
+
+.contact-cell img{
+    width: 100%;
+    object-fit: contain;
+}

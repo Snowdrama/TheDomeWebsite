@@ -1,9 +1,11 @@
 use yew::{Component, Context, html, Html};
-use yew_router::prelude::*;
 
 use chrono::{DateTime, Utc, TimeZone};
 use chrono_tz::{US::Eastern, Tz};
 use gloo_timers::callback::{Interval};
+
+use crate::navigation::NavigationMenu;
+use crate::common::Header;
 
 pub struct HomePage {
     time: String,
@@ -50,7 +52,6 @@ impl Component for HomePage{
     type Message = Msg;
     type Properties = ();
 
-
     fn create(_ctx: &Context<Self>) -> Self {
         
         let clock_handle = {
@@ -74,6 +75,7 @@ impl Component for HomePage{
             }
         }
     }
+
     fn view(&self, _ctx: &Context<Self>) -> Html {
         let djtimes = vec![
             Person {
@@ -136,15 +138,8 @@ impl Component for HomePage{
     
         html!(
             <>
-                <h1 class="title-grid dome-title">
-                    <div>{ "The" }</div>
-                    <img class="dome-logo" src="images/thedomelogo.png" />
-                    <div>{ "Dome" }</div>
-                </h1>
-                <h1 class="date-time">
-                    { &self.time  }
-                </h1>
-                <hr/>
+                <Header/>
+                <NavigationMenu/>
                 <div class="teaser-grid">
                     <img class="teaser-left" width="24%" src="images/lp_logo.png" />
                     <video class="teaser-center" width="50%" controls=true autoplay=false>
